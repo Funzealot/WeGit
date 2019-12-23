@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WeGit</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="your_github_account">你的Github账号</string>
+    <string name="your_github_password">你的Github密码</string>
+
+</resources>

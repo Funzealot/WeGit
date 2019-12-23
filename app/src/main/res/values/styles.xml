@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- 这里是关于?attr的使用 使其生效-->
+        <item name="myAttr">#85A3EC</item>
+        <!--这种方式可行-->
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+
+
+    </style>
+
+
+    <style name="OverflowMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>  <!--设置不覆盖锚点-->
+        <item name="android:dropDownVerticalOffset">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:popupBackground">@color/green</item> <!--更改背景颜色-->
+    </style>
+
+
+    <style name="titleAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+
+
+</resources>

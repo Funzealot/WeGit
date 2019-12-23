@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:padding="10dp">
+    
+    
+    <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintVertical_bias="0.2"
+            android:textSize="40sp"
+            android:text="@string/app_name"
+            />
+    
+    
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/account_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:theme="@style/MyEditText"
+            app:layout_constraintTop_toBottomOf="@id/app_title"
+            app:layout_constraintBottom_toTopOf="@id/login_bt"
+            app:layout_constraintVertical_bias="0.28"
+            >
+        
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/account_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/your_github_account"
+                android:textSize="14sp"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="5dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textAllCaps="false"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:theme="@style/MyEditText"
+                
+                
+                />
+    
+    </com.google.android.material.textfield.TextInputLayout>
+    
+    
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/account_input"
+            android:hint="@string/your_github_password"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTintMode="multiply"
+            android:theme="@style/MyEditText"
+
+            app:layout_constraintTop_toBottomOf="@id/account_input"
+            app:layout_constraintBottom_toTopOf="@id/login_bt"
+            
+            
+            >
+        
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textSize="14sp"
+                android:inputType="textPassword"
+                android:imeOptions="actionDone"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_lock"
+                
+                
+                />
+    </com.google.android.material.textfield.TextInputLayout>
+    
+    
+    <Button
+            android:id="@+id/login_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.7"
+            android:text="登   录"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/login_bt_bg"
+            android:layout_margin="10dp"
+            />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

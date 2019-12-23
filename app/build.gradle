@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+
+
+    defaultConfig {
+        applicationId "com.fs.wegit"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField('String', 'CLIENT_ID', '"Iv1.119410d8775d8b32"')
+            buildConfigField('String', 'CLIENT_SECRET', '"942714a8a31dcad32ed6602532fe5954ee0c8f95"')
+
+        }
+
+        debug {
+            buildConfigField('String', 'CLIENT_ID', '"Iv1.119410d8775d8b32"')
+            buildConfigField('String', 'CLIENT_SECRET', '"942714a8a31dcad32ed6602532fe5954ee0c8f95"')
+
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation project(':lib')
+
+    kapt 'com.github.bumptech.glide:compiler:4.9.0'
+    kapt "androidx.room:room-compiler:2.2.0"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

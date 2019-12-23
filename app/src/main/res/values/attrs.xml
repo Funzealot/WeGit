@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="myAttr" format="color"/>
+    
+    <style name="MyEditText" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">#DDD8D4D4</item>
+        <item name="colorControlActivated">#000000</item>
+        
+    </style>
+    
+</resources>

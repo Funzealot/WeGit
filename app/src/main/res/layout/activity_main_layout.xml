@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:drawer="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+        >
+
+    <!--还可以在style文件 theme中设置属性的值-->
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:background="?attr/myAttr"
+            app:title="@string/app_name"
+            app:titleTextAppearance="@style/titleAppearance"
+            app:menu="@menu/home_menu"
+            app:titleTextColor="@color/blue"
+            app:subtitleTextColor="@color/royalblue"
+            app:popupTheme="@style/OverflowMenu"
+            >
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/app_name"
+                />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tool_bar"
+            drawer:openDrawer="start"
+            >
+
+        <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+        </RelativeLayout>
+
+        <!--这里设置android:layout_gravity="start"即可  不一定使用NavigationView-->
+
+        <com.google.android.material.navigation.NavigationView
+                android:id="@+id/navigation_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                app:headerLayout="@layout/nav_header_layout"
+                app:elevation="10dp"
+                app:menu="@menu/home_menu"
+                >
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+    
+    
+
+</RelativeLayout>

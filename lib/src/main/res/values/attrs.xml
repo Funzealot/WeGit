@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ClearEditText">
+        <attr name="cleanDrawable" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="PasswordEditText">
+        <attr name="eyeVisibleDrawable" format="reference"/>
+        <attr name="eyeInvisibleDrawable" format="reference"/>
+    </declare-styleable>
+</resources>
